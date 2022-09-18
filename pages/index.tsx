@@ -1,4 +1,11 @@
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+import { Button } from "@mui/material";
+
 import { useState } from "react";
+
 function Header({ title }) {
   return <h1>{title ? title : "Default title"}</h1>;
 }
@@ -21,9 +28,12 @@ function HomePage() {
         ))}
       </ul>
 
-      <button onClick={handleClick}>Like ({likes})</button>
+      <Button variant="contained" onClick={handleClick}>
+        Like ({likes})
+      </Button>
     </div>
   );
 }
 
 export default HomePage;
+
