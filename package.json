@@ -52,6 +52,7 @@
     "eslint-plugin-storybook": "^0.6.5",
     "prettier": "2.7.1",
     "prettier-airbnb-config": "^1.0.0",
+    "sass": "^1.55.0",
     "typescript": "*"
   },
   "repository": "git@github.com:bensrww/portfolio.git"

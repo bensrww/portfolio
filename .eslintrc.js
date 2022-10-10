@@ -20,8 +20,20 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    '@typescript-eslint/explicit-function-return-type': 'warn',
+    '@typescript-eslint/explicit-function-return-type': 'off',
     'react/jsx-filename-extension': [1, {extensions: ['.tsx', '.jsx']}],
     'react/react-in-jsx-scope': 'off',
+    'arrow-body-style': 'off',
+    'react/function-component-definition': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
   },
 };
