@@ -7,7 +7,7 @@ import {Button} from '@mui/material';
 import {useState} from 'react';
 
 function Header({title}: {title: string}) {
-  return <h1>{title ? title : 'Default title'}</h1>;
+  return <h1>{title.length > 0 || 'Default title'}</h1>;
 }
 
 function HomePage() {
