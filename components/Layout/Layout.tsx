@@ -1,7 +1,9 @@
+import Header from "@components/Header/Header";
+
 const Layout = ({children}: any) => {
   return (
     <div>
-      Bar
+      <Header />
       <main>{children}</main>
     </div>
   );
