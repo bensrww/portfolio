@@ -1,7 +1,8 @@
+import type {AppProps} from 'next/app';
+import Layout from '@components/Layout';
 import variables from './styles.scss';
-import Layout from './components/Layout';
 
-const MyApp = ({Component, pageProps}: any) => {
+const MyApp = ({Component, pageProps}: AppProps) => {
   return (
     <Layout>
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}

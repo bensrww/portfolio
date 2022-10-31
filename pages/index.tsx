@@ -6,16 +6,16 @@ import {Button} from '@mui/material';
 
 import {useState} from 'react';
 
-function Header({title}: {title: string}) {
-  return <h1>{title ? title : 'Default title'}</h1>;
-}
+const Header = ({title}: {title: string}) => {
+  return <h1>{title.length > 0 ? title : 'Default title'}</h1>;
+};
 
-function HomePage() {
+const HomePage = () => {
   const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
 
   const [likes, setLikes] = useState(0);
 
-  function handleClick() {
+  const handleClick = () => {
     setLikes(likes + 1);
   }
 
@@ -33,6 +33,6 @@ function HomePage() {
       </Button>
     </div>
   );
-}
+};
 
 export default HomePage;
