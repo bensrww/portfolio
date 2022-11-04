@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className={styles.container}>
       <div className={styles.brandIcon}>
-        <FiveGSharpIcon fontSize="inherit" />
+        <FiveGSharpIcon color='primary' fontSize="inherit" />
       </div>
       <nav id={styles.nav}>
         <div className={styles.navContainer}>
