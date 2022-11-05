@@ -12,14 +12,6 @@ const Header = ({title}: {title: string}) => {
 };
 
 const HomePage = () => {
-  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
-
-  const [likes, setLikes] = useState(0);
-
-  const handleClick = () => {
-    setLikes(likes + 1);
-  };
-
   return (
     <>
       <SectionContainer>

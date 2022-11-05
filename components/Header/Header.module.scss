@@ -7,6 +7,9 @@
   display: flex;
   justify-content: space-between;
   padding: 0px $left-right-base-padding;
+  position: relative;
+  z-index: 10;
+  background-color: white;
 }
 
 .brandIcon {
