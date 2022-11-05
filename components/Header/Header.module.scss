@@ -4,12 +4,16 @@
   height: 104px;
   border-radius: 0px 0px 25px 25px;
   box-shadow: 0px 3px 6px #00000029;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: white;
+}
+
+.row {
   display: flex;
   justify-content: space-between;
   padding: 0px $left-right-base-padding;
-  position: relative;
-  z-index: 10;
-  background-color: white;
 }
 
 .brandIcon {
