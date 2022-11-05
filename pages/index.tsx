@@ -18,14 +18,14 @@ const HomePage = () => {
 
   const handleClick = () => {
     setLikes(likes + 1);
-  }
+  };
 
   return (
-    <div>
+    <>
       <SectionContainer>
         <h1>Hello World</h1>
       </SectionContainer>
-    </div>
+    </>
   );
 };
 

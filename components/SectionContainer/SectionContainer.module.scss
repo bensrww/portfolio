@@ -1,5 +1,8 @@
+@import 'variables.scss';
+
 .container {
   background-color: #eeeeee;
-  padding: 216px 284px;
+  padding: 216px $left-right-base-padding;
   border-radius: 0px 0px 25px 25px;
+  box-shadow: 0px 3px 6px #00000029;
 }

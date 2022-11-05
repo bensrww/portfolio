@@ -1,11 +1,13 @@
-import Header from "@components/Header";
+import Header from '@components/Header';
+
+import styles from './Layout.module.scss';
 
 const Layout = ({children}: any) => {
   return (
-    <div>
+    <>
       <Header />
-      <main>{children}</main>
-    </div>
+      <main className={styles.content}>{children}</main>
+    </>
   );
 };
 
