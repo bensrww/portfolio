@@ -1,3 +1,4 @@
+import SectionContainer from '@components/SectionContainer';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -21,16 +22,9 @@ const HomePage = () => {
 
   return (
     <div>
-      <Header title="Develop. Preview. Ship. " />
-      <ul>
-        {names.map(name => (
-          <li key={name}>{name}</li>
-        ))}
-      </ul>
-
-      <Button variant="contained" onClick={handleClick}>
-        Like ({likes})
-      </Button>
+      <SectionContainer>
+        <h1>Hello World</h1>
+      </SectionContainer>
     </div>
   );
 };
