@@ -1,5 +1,5 @@
 import {useTranslation} from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import SectionContainer from '@components/SectionContainer';
 import {Button, Stack} from '@mui/material';
 
@@ -10,17 +10,16 @@ const HomePage = () => {
   return (
     <>
       <SectionContainer>
-        <Stack spacing="130px" maxWidth={700}>
-          <h1 className={styles.title}>{t('title')}</h1>
-          <p className={styles.selfIntro}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
-          </p>
-          <Button variant="contained" className={styles.ctaButton}>
-            Contact Me
-          </Button>
+        <Stack direction="row" position="relative">
+          <Stack spacing="130px" maxWidth={700}>
+            <h1 className={styles.title}>{t('title')}</h1>
+            <p className={styles.selfIntro}>{t('selfIntro')}</p>
+            <Button variant="contained" className={styles.ctaButton}>
+              Contact Me
+            </Button>
+          </Stack>
+          <img className={styles.heroImage} src="/images/heroImage.svg" alt="hero" />
         </Stack>
-        <img className={styles.heroImage} src="/images/heroImage.svg" width={950} alt="hero" />
       </SectionContainer>
       <span>Other sections</span>
     </>
@@ -30,9 +29,9 @@ const HomePage = () => {
 export const getStaticProps = async ({locale}: any) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['index']))
-    }
-  }
-}
+      ...(await serverSideTranslations(locale, ['index'])),
+    },
+  };
+};
 
 export default HomePage;
