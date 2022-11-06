@@ -1,4 +1,5 @@
 import {useTranslation} from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import SectionContainer from '@components/SectionContainer';
 import {Button, Stack} from '@mui/material';
 
@@ -25,5 +26,14 @@ const HomePage = () => {
     </>
   );
 };
+
+export const getStaticProps = async ({locale}: any) => {
+  console.log('locale', locale);
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['index']))
+    }
+  }
+}
 
 export default HomePage;
