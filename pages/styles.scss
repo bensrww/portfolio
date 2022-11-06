@@ -10,18 +10,24 @@
 @font-face {
   font-family: 'Monotype Corsiva';
   src: url('../asset/Monotype_Corsiva/MTCORSVA.TTF');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../asset/Noto_Sans/NotoSansTC-Regular.otf');
 }
 
 body {
   margin: 0;
-  font-family: Poppins, sans-serif;
+  font-family: Poppins, Noto Sans, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: $secondary-color;
 }
 
 h1 {
-  font-family: 'Monotype Corsiva';
+  font-family: 'Monotype Corsiva', Noto Sans;
   font-size: 146px;
   color: $primary-color;
   font-weight: normal;

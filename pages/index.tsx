@@ -26,10 +26,10 @@ const HomePage = () => {
     <>
       {sections.map((section, index) => {
         return (
-          // eslint-disable-next-line react/no-array-index-key
           <SectionContainer
             className={styles.sectionContainer}
             isAlternate={Boolean(index % 2)}
+            // eslint-disable-next-line react/no-array-index-key
             key={`section_${index}`}
           >
             {section}
