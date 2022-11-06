@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 .title {
   margin: 0;
 }
@@ -15,6 +17,19 @@
   bottom: 0;
   right: 0;
   z-index: 1;
+}
+
+.sectionContainer {
+  &:not(:first-child) {
+    bottom: $bottom-offset;
+  }
+  position: relative;
+}
+$numOfElements: 10;
+@for $i from 0 to $numOfElements {
+  .sectionContainer:nth-child(#{$i}) {
+    z-index: $numOfElements - $i;
+  }
 }
 
 .ctaButton {
