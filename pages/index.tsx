@@ -28,7 +28,6 @@ const HomePage = () => {
 };
 
 export const getStaticProps = async ({locale}: any) => {
-  console.log('locale', locale);
   return {
     props: {
       ...(await serverSideTranslations(locale, ['index']))
