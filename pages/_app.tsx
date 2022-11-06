@@ -1,7 +1,9 @@
 import type {AppProps} from 'next/app';
+import {appWithTranslation} from 'next-i18next';
 import Layout from '@components/Layout';
-import variables from './variables.scss';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
+
+import variables from './variables.scss';
 
 import './styles.scss';
 
@@ -33,4 +35,4 @@ const MyApp = ({Component, pageProps}: AppProps) => {
   );
 };
 
-export default MyApp;
+export default appWithTranslation(MyApp);

@@ -1,22 +1,16 @@
+import {useTranslation} from 'next-i18next';
 import SectionContainer from '@components/SectionContainer';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
 import {Button, Stack} from '@mui/material';
 
 import styles from './index.module.scss';
 
-const Header = ({title}: {title: string}) => {
-  return <h1>{title.length > 0 ? title : 'Default title'}</h1>;
-};
-
 const HomePage = () => {
+  const {t} = useTranslation('index');
   return (
     <>
       <SectionContainer>
         <Stack spacing="130px" maxWidth={700}>
-          <h1 className={styles.title}>Hello World</h1>
+          <h1 className={styles.title}>{t('title')}</h1>
           <p className={styles.selfIntro}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.
