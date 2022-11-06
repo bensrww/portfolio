@@ -21,7 +21,10 @@ const HomePage = () => {
           <img className={styles.heroImage} src="/images/heroImage.svg" alt="hero" />
         </Stack>
       </SectionContainer>
-      <span>Other sections</span>
+
+      <SectionContainer isAlternate>
+        <span>Other sections</span>
+      </SectionContainer>
     </>
   );
 };
