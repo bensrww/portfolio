@@ -17,6 +17,9 @@ import {useRouter} from 'next/router';
 
 import styles from './Header.module.scss';
 
+const hkIcon = <img src="/images/zh_HK.png" />;
+const enIcon = <img src="/images/en.png" />;
+
 const Header = () => {
   const {t} = useTranslation('index');
   const menuAnchorRef = useRef<HTMLButtonElement>(null);
@@ -41,6 +44,17 @@ const Header = () => {
     }
   };
 
+  const getLanguageIcon = (): JSX.Element | null => {
+    const currentLang = router.locale;
+    if (currentLang === 'en') {
+      return enIcon;
+    }
+    if (currentLang === 'zh_HK') {
+      return hkIcon;
+    }
+    return null;
+  };
+
   return (
     <header className={styles.container}>
       <div className={styles.row}>
@@ -59,7 +73,7 @@ const Header = () => {
               aria-haspopup="true"
               aria-expanded={isMenuVisible ? 'true' : undefined}
             >
-              <Avatar sx={{width: 32, height: 32}}>M</Avatar>
+              <Avatar sx={{width: 32, height: 32}}>{getLanguageIcon()}</Avatar>
             </IconButton>
             <Link className={styles.navLink} underline="none" href="/">
               Home
@@ -99,12 +113,12 @@ const Header = () => {
                     onKeyDown={handleListKeyDown}
                   >
                     <MenuItem onClick={() => handleLanguageClick('en')}>
-                      <Avatar />
-                      Profile
+                      {enIcon}
+                      {t('en')}
                     </MenuItem>
                     <MenuItem onClick={() => handleLanguageClick('zh_HK')}>
-                      <Avatar />
-                      My account
+                      {hkIcon}
+                      {t('zh_HK')}
                     </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
