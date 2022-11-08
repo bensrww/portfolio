@@ -30,4 +30,9 @@
 .navContainer {
   display: flex;
   column-gap: 50px;
+  height: 42px;
+}
+
+.navLink {
+  line-height: 42px;
 }

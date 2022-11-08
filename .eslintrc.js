@@ -39,5 +39,6 @@ module.exports = {
     'import/extensions': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     'react/require-default-props': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
   },
 };
