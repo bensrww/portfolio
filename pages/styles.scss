@@ -1,23 +1,5 @@
 @import './variables.scss';
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('../asset/Poppins/Poppins-Regular.ttf');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Monotype Corsiva';
-  src: url('../asset/Monotype_Corsiva/MTCORSVA.TTF');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  src: url('../asset/Noto_Sans/NotoSansTC-Regular.otf');
-}
-
 body {
   margin: 0;
   font-family: Poppins, Noto Sans, sans-serif;
